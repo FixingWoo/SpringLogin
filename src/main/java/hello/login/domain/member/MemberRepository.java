@@ -23,7 +23,7 @@ public class MemberRepository {
         return store.get(id);
     }
 
-    public Optional<Member> findByLongId(String loginId) {
+    public Optional<Member> findByLoginId(String loginId) {
         return findAll().stream()
                 .filter(m -> m.getLoginId().equals(loginId))
                 .findAny();
